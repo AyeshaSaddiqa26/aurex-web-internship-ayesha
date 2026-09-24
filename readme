@@ -1,0 +1,232 @@
+# Aurex Full-Stack Engineering Internship — Week 4
+
+## Intern Information
+
+**Name:** Ayesha Saddiqa
+**Domain:** Full-Stack Web Development
+**Week:** Week 4
+
+---
+
+## Project
+
+### Task Manager Web Application
+
+A browser-based Task Manager application developed as part of Week 4 of the Aurex Full-Stack Engineering Internship.
+
+The project focuses on JavaScript programming fundamentals, DOM manipulation, events, form handling, validation, and data persistence using `localStorage`.
+
+---
+
+## Live Deployment
+
+**Live Demo:** `TODO — Add GitHub Pages or Vercel deployment link`
+
+---
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- JavaScript
+- DOM Manipulation
+- Browser Events
+- LocalStorage
+- Git & GitHub
+
+---
+
+## Features Implemented
+
+- Add new tasks
+- Edit existing tasks
+- Delete tasks
+- Mark tasks as completed
+- Display total, pending, and completed task counts
+- Search tasks by title or description
+- Filter tasks by:
+  - All
+  - Pending
+  - Completed
+
+- Task priority selection
+- Form validation
+- Dynamic task card creation using JavaScript
+- Dynamic progress percentage
+- Progress bar based on completed tasks
+- Data persistence using `localStorage`
+- Tasks remain available after refreshing the browser
+- Notification button showing the number of pending tasks
+- Dashboard navigation
+- My Tasks navigation
+- Completed Tasks navigation
+- Responsive user interface
+
+---
+
+## JavaScript Exercises Completed
+
+### 1. Variables
+
+Practiced:
+
+- `let`
+- `const`
+- Variable declaration
+- Updating variable values
+
+Example concepts were applied throughout the Task Manager to store tasks, counters, form values, and other application data.
+
+### 2. Data Types and Operators
+
+Practiced:
+
+- Strings
+- Numbers
+- Booleans
+- Arrays
+- Objects
+- Arithmetic operators
+- Comparison operators
+- Logical operators
+
+### 3. Conditions
+
+Practiced:
+
+- `if`
+- `else`
+- `else if`
+- Conditional expressions
+
+Conditions were used for form validation, task completion status, filtering, and progress calculation.
+
+### 4. Loops
+
+Practiced:
+
+- `for` loops
+- `while` loops
+- `forEach()`
+
+Loops were used to process and display multiple tasks.
+
+### 5. Functions
+
+Practiced:
+
+- Function declarations
+- Parameters
+- Arguments
+- Return values
+- Arrow functions
+- Reusable functions
+
+Functions were used to organize application logic such as rendering tasks, updating statistics, filtering tasks, and saving data.
+
+### 6. Arrays
+
+Practiced:
+
+- Creating arrays
+- Adding items using `push()`
+- Searching with `find()`
+- Filtering with `filter()`
+- Iterating with `forEach()`
+
+The Task Manager stores tasks inside an array of task objects.
+
+### 7. Objects
+
+Practiced:
+
+- Creating objects
+- Object properties
+- Accessing object properties
+- Updating object properties
+- Arrays of objects
+
+Each task is represented as an object containing properties such as:
+
+{
+id: 1,
+title: "Learn JavaScript",
+description: "Practice DOM",
+priority: "High",
+completed: false
+}
+
+---
+
+## DOM Manipulation and Events
+
+The project also applies JavaScript to interact with the webpage dynamically.
+
+Practiced:
+
+- `getElementById()`
+- `querySelector()`
+- `createElement()`
+- `appendChild()`
+- `classList`
+- Changing `textContent`
+- Changing input `value`
+- `addEventListener()`
+- Handling button clicks
+- Handling form input
+- Handling checkbox changes
+- Using the event object
+- Preventing default browser behavior
+
+---
+
+## Data Persistence
+
+The application uses browser `localStorage` to store tasks.
+
+Tasks are converted into JSON using:
+
+```javascript
+JSON.stringify();
+```
+
+and retrieved using:
+
+```javascript
+JSON.parse();
+```
+
+This allows tasks to remain available even after the page is refreshed.
+
+---
+
+## Challenges Faced
+
+During development, several challenges were encountered:
+
+1. Understanding how JavaScript connects HTML elements with the DOM.
+2. Dynamically creating task cards using JavaScript.
+3. Handling multiple events such as button clicks, checkbox changes, and search input.
+4. Keeping task statistics updated whenever tasks were added, edited, completed, or deleted.
+5. Implementing search and filtering without losing the original task data.
+6. Understanding how `localStorage` works and how to convert JavaScript data into JSON.
+7. Managing edit and delete operations for dynamically created task cards.
+8. Making sure the task form and task menu behaved correctly with JavaScript.
+
+---
+
+## What I Learned
+
+Through this project, I learned how JavaScript can be used to make a webpage interactive and dynamic.
+
+I gained practical experience with JavaScript fundamentals including variables, conditions, loops, functions, arrays, and objects. I also learned how to manipulate the DOM, respond to user events, validate forms, create elements dynamically, and store application data using `localStorage`.
+
+This project helped me understand how the concepts learned during Week 4 can be combined to build a complete browser-based application.
+
+---
+
+## Conclusion
+
+The Week 4 Task Manager demonstrates the practical application of JavaScript programming fundamentals, DOM manipulation, events, forms, validation, and browser data persistence.
+
+The project provides a functional task management experience while demonstrating the JavaScript concepts covered during Week 4 of the Aurex Full-Stack Engineering Internship.

@@ -1,0 +1,716 @@
+/* ================================
+   1. CSS VARIABLES
+================================ */
+
+:root {
+  --background: #f7f5f0;
+  --card: #ffffff;
+
+  --primary: #37a999;
+  --primary-light: #e1f3ef;
+
+  --peach: #fbd6c8;
+  --cream: #feeac7;
+
+  --heading: #644872;
+  --text: #2f3430;
+  --muted: #7b7f78;
+
+  --border: #e8e4dd;
+
+  --high: #e79a83;
+  --medium: #d5a84c;
+  --completed: #37a999;
+
+  --shadow: 0 4px 18px rgba(70, 60, 50, 0.06);
+
+  --radius: 16px;
+}
+
+/* ================================
+   2. RESET
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+
+  background-color: var(--background);
+  color: var(--text);
+
+  font-family: Arial, sans-serif;
+}
+
+/* ================================
+   3. SIDEBAR
+================================ */
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 20px;
+
+  background-color: var(--card);
+  border-right: 1px solid var(--border);
+}
+
+/* Logo */
+
+.logo {
+  margin-bottom: 45px;
+
+  color: var(--heading);
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Navigation */
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar a {
+  padding: 12px 14px;
+
+  color: var(--muted);
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+.sidebar a:hover {
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+/* Bottom section */
+
+.sidebar-bottom {
+  margin-top: auto;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  padding: 10px 10px;
+  border-radius: 10px;
+  align-items: center;
+}
+.sidebar-bottom a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+/* ================================
+   4. MAIN CONTENT
+================================ */
+
+.main-content {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 40px 50px;
+}
+
+/* ================================
+   5. HEADER
+================================ */
+
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+/* Welcome */
+
+.welcome h1 {
+  margin-bottom: 8px;
+
+  color: var(--heading);
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.welcome p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Header actions */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-actions button {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--border);
+  border-radius: 50%;
+
+  background-color: var(--card);
+
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Profile */
+
+.profile {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: var(--peach);
+  color: var(--heading);
+
+  font-weight: 700;
+}
+
+/* ================================
+   6. STATISTICS
+================================ */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  padding: 24px;
+
+  background-color: var(--card);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+.stat-card p {
+  margin-bottom: 12px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+.stat-card h2 {
+  color: var(--heading);
+
+  font-size: 30px;
+}
+
+/* Different card accents */
+
+.stat-card:nth-child(1) {
+  border-top: 4px solid var(--primary);
+}
+
+.stat-card:nth-child(2) {
+  border-top: 4px solid var(--peach);
+}
+
+.stat-card:nth-child(3) {
+  border-top: 4px solid var(--cream);
+}
+
+/* ================================
+   7. TASK SECTION
+================================ */
+.task-form {
+  display: none;
+}
+.tasks-section {
+  width: 100%;
+}
+
+/* Tasks header */
+
+.tasks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.tasks-header h2 {
+  margin-bottom: 6px;
+
+  color: var(--heading);
+
+  font-size: 22px;
+}
+
+.tasks-header p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Add Task */
+
+.add-task-btn {
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: var(--primary);
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.add-task-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+/* =========================================
+   TASK FORM
+========================================= */
+
+.task-form {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Form inputs */
+
+.task-form input,
+.task-form select {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--background);
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+/* Input sizes */
+
+.task-form input {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* Select */
+
+.task-form select {
+  min-width: 120px;
+}
+
+/* Focus effect */
+
+.task-form input:focus,
+.task-form select:focus {
+  border-color: var(--primary);
+}
+
+/* Save button */
+
+.task-form button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+
+  flex: 1;
+}
+
+.task-form button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+/* ================================
+   8. SEARCH + FILTER
+================================ */
+
+.task-controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.task-controls input {
+  flex: 1;
+
+  height: 44px;
+
+  padding: 0 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background-color: var(--card);
+
+  color: var(--text);
+
+  outline: none;
+}
+
+.task-controls input:focus {
+  border-color: var(--primary);
+}
+
+.task-controls select {
+  height: 44px;
+
+  padding: 0 14px;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+
+  background-color: var(--card);
+
+  color: var(--text);
+
+  cursor: pointer;
+}
+
+/* ================================
+   9. TASK LIST
+================================ */
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ================================
+   10. TASK CARD
+================================ */
+
+.task-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  padding: 20px;
+
+  background-color: var(--card);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+
+  transition: 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Checkbox */
+
+.task-check {
+  padding-top: 3px;
+}
+
+.task-check input {
+  width: 18px;
+  height: 18px;
+
+  cursor: pointer;
+
+  accent-color: var(--primary);
+}
+
+/* Task information */
+
+.task-info {
+  flex: 1;
+}
+
+.task-info h3 {
+  margin-bottom: 6px;
+
+  color: var(--heading);
+
+  font-size: 16px;
+}
+
+.task-info p {
+  margin-bottom: 12px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+}
+
+/* Task metadata */
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-meta span {
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background-color: var(--primary-light);
+
+  color: var(--primary);
+
+  font-size: 12px;
+}
+
+.task-options {
+  display: none;
+}
+
+.task-options.show {
+  display: flex;
+  flex-direction: column;
+}
+.task-menu {
+  flex: 1;
+}
+/* Priority */
+
+.task-meta span:last-child {
+  background-color: var(--peach);
+  color: var(--heading);
+}
+
+/* Three-dot menu */
+
+.task-menu {
+  border: none;
+
+  background: transparent;
+
+  color: var(--muted);
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+/* ================================
+   11. PROGRESS SECTION
+================================ */
+
+.progress-section {
+  margin-top: 30px;
+
+  padding: 24px;
+
+  background-color: var(--card);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+  box-shadow: var(--shadow);
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+.progress-header h2 {
+  margin-bottom: 5px;
+
+  color: var(--heading);
+
+  font-size: 18px;
+}
+
+.progress-header p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.progress-percentage {
+  color: var(--primary);
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Progress bar */
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background-color: var(--primary-light);
+}
+
+.progress-fill {
+  width: 78%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background-color: var(--primary);
+}
+
+/* =========================================
+   EDIT & DELETE MENU BUTTONS
+========================================= */
+
+.task-options button {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-options button:hover {
+  background: var(--primary-light);
+}
+
+.task-options button:first-child {
+  color: var(--primary);
+}
+
+.task-options button:last-child {
+  color: #d9534f;
+}
+/* ================================
+   12. RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   13. MOBILE
+================================ */
+
+@media (max-width: 650px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+
+    padding: 20px;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar-bottom {
+    margin-top: 10px;
+  }
+
+  .main-content {
+    padding: 25px 18px;
+  }
+
+  .top-header {
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .welcome h1 {
+    font-size: 23px;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .task-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tasks-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
